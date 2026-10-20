@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070b12"><title>VoxSentinel · Voice integrity</title><link rel="stylesheet" href="/static/style.css?v=fluid1"><link rel="stylesheet" href="/static/hologram.css?v=exact4"><link rel="stylesheet" href="/static/fullscreen.css?v=full1"></head>
+<body data-tone="blue">
+<canvas id="orb" aria-hidden="true"></canvas>
+<header class="topbar"><a class="brand" href="/" aria-label="VoxSentinel home"><span class="brand-icon">◈</span> VOXSENTINEL<span class="version">V2</span></a><span class="header-caption">VOICE INTEGRITY / LIVE ANALYSIS</span><div class="connection"><i></i><span id="connection">Connecting</span></div></header>
+<main>
+<div class="intro"><div><p class="eyebrow">LISTEN BEYOND THE VOICE</p><h1>Sound, under the surface.</h1></div><div class="session-label"><span id="sourceLabel">NO SOURCE CONNECTED</span><time id="clock"></time></div></div>
+<div class="console">
+<aside class="panel activity"><div class="panel-heading"><h2>Session activity</h2><span class="micro-label">LIVE FEED</span></div><ol id="logs"><li><time>—</time><span>Ready for a recording or microphone.</span></li></ol><div class="timeline-wrap"><div class="panel-heading"><h2>Signal history</h2><span class="micro-label">SYNTHETIC %</span></div><canvas id="history" aria-label="History of synthetic indicators"></canvas><div class="axis"><span>Earlier</span><span>Latest</span></div></div></aside>
+<section class="visual" aria-label="Audio visualization and assessment"><div class="visual-top"><span><i class="state-dot"></i><span id="visualMode">STANDBY</span></span><button class="text-button" id="motion" aria-pressed="true">Pause motion</button></div><div class="visual-bottom" role="status" aria-live="polite"><p class="eyebrow" id="verdictKicker">AWAITING AUDIO</p><h2 id="verdict">Ready to listen.</h2><p id="verdictNote">Start your microphone or upload a recording.</p></div><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span></section>
+<aside class="panel detectors"><div class="panel-heading"><h2>Detector signals</h2><span class="micro-label">04 MODELS</span></div><p class="panel-note">Individual synthetic indicators</p><div id="detectors"></div><div class="aggregate"><span>HIGHEST SYNTHETIC INDICATOR</span><strong id="score">—<small>%</small></strong><p id="resultAge">No analysis yet</p></div></aside>
+</div>
+<section class="control-panel" aria-label="Audio controls"><div class="source-info"><span class="source-icon">⌁</span><div><strong id="fileName">Choose your audio source</strong><p id="sourceHint">Microphone or an audio file up to 20 MB</p></div></div><div class="controls"><button class="button secondary" id="upload">↑ <span>Upload audio</span></button><input hidden type="file" id="file" accept=".wav,.mp3,.m4a,.aac,.flac,.ogg,.webm"><button class="button primary" id="microphone"><span class="mic-dot"></span><span id="micLabel">Start microphone</span></button><button class="button icon-button" id="reset" aria-label="Reset session" title="Reset session">↺</button></div></section>
+<div class="below-controls"><p><i class="small-dot"></i><span id="statusHint">Audio is processed by your local backend.</span></p><button class="text-button" id="report" disabled>Download report ↗</button></div>
+<div id="error" class="error" role="alert" hidden></div><div class="preview" id="preview" hidden><span>RECORDING PREVIEW</span><audio id="audio" controls preload="metadata"></audio></div>
+<footer><p><span class="legend blue"></span> Standby / listening <span class="legend red"></span> AI indicators <span class="legend green"></span> Likely human</p><p>Model indicators, not proof of authenticity.</p></footer>
+</main><script type="module" src="/static/app.js?v=amber1"></script>
+</body></html>

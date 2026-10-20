@@ -1,0 +1,12 @@
+
+/* Original hologram atmosphere and alert effects. */
+body{background:radial-gradient(ellipse at 50% 42%,#14183f 0%,#070a1c 55%,#03040c 100%);background-attachment:fixed}
+.visual{background:transparent;border-color:rgba(0,243,255,.22)}
+.panel{background:rgba(6,10,26,.55);backdrop-filter:blur(12px);border-top:2px solid #00f3ff;box-shadow:0 0 30px -10px #00f3ff}
+.detectors{border-top-color:#a855f7;box-shadow:0 0 30px -10px #a855f7}
+body[data-tone="red"]::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;box-shadow:inset 0 0 180px rgba(255,0,60,.6);animation:reference-alert .7s infinite alternate}
+body[data-tone="red"] h1{animation:reference-glitch .25s infinite}
+@keyframes reference-alert{from{opacity:.3}to{opacity:1}}
+@keyframes reference-glitch{25%{transform:translate(-2px,1px)}50%{transform:translate(2px,-1px)}}
+body.motion-paused::before,body.motion-paused h1{animation:none!important}
+@media(prefers-reduced-motion:reduce){body[data-tone="red"]::before,body[data-tone="red"] h1{animation:none!important}}

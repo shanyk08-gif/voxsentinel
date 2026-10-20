@@ -1,0 +1,12 @@
+/* The hologram now belongs to the viewport, not the center card. */
+body{isolation:isolate}
+#orb{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;z-index:0;pointer-events:none}
+.topbar,body>main{position:relative;z-index:1}
+.topbar{background:rgba(5,9,22,.5);backdrop-filter:blur(8px)}
+.visual{background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible}
+.visual .corner{display:none}
+.panel{background:rgba(6,10,26,.65)}
+.control-panel{background:rgba(10,17,30,.82);backdrop-filter:blur(12px)}
+.visual-bottom{text-shadow:0 2px 14px #03040c,0 0 24px #03040c}
+.visual-top{pointer-events:auto}
+@media(max-width:720px){.detectors{background:rgba(6,10,26,.85)}}

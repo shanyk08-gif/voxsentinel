@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+@font-face{
+  font-family:'Fonseca';
+  src:local('Fonseca Thin'),local('Fonseca-Thin'),
+      url('/static/fonts/Fonseca-Thin.woff2') format('woff2'),
+      url('/static/fonts/Fonseca-Thin.woff') format('woff'),
+      url('/static/fonts/Fonseca-Thin.otf') format('opentype'),
+      url('/static/fonts/Fonseca-Thin.ttf') format('truetype');
+  font-weight:100;
+  font-style:normal;
+  font-display:swap;
+}
+:root{--sans:'Manrope',sans-serif;--mono:'Manrope',sans-serif;--heading:'Fonseca','Manrope',sans-serif}
+body,button,input,select,textarea,a,p,span,time,small,label,output,li,strong,b,i,
+.header-caption,.connection,.eyebrow,.session-label,.micro-label,.visual-top,
+.axis,.panel-note,.aggregate>span,.aggregate p,.preview>span,#logs time,
+.detector strong,.version{
+  font-family:'Manrope',sans-serif;
+  font-weight:300;
+  font-synthesis:none;
+}
+h1,h2,h3,h4,h5,h6,.brand,.brand em,.brand .version,
+.visual-bottom h2,.panel-heading h2,.detector h3,
+.aggregate>strong,#score,.eyebrow,#verdictKicker{
+  font-family:var(--heading);
+  font-weight:100;
+  font-style:normal;
+  font-synthesis:none;
+}
+.brand-icon,.source-icon,.icon-button{font-family:Arial,sans-serif;font-weight:300}
+.source-info strong,.detector strong{font-weight:300}
+h1,.visual-bottom h2{letter-spacing:.02em}
+.aggregate>strong{letter-spacing:0}
